@@ -1,0 +1,125 @@
+.libraryCard {
+  max-width: $content-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  .find-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: -3px;
+    .find-card__form {
+      z-index: 1;
+      .find-card__form__title {
+        @include font(3rem, 4rem, 400);
+        color: $color-primary;
+        text-align: center;
+      }
+      .find-card__form__border {
+        width: 600px;
+        max-height: 386px;
+        border: 3px solid $color-tag;
+        margin: 29px 0 0 0;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        .form__block {
+          width: 560px;
+          background: $color-tag;
+          margin: 17px 20px 0px 17px;
+          padding-bottom: 12px;
+          > input {
+            margin: 13px 20px;
+          }
+          .form__block__title {
+            @include font(3rem, 5rem, 400);
+            color: $color-primary;
+            padding: 20px 20px 6px 20px;
+          }
+          .form__input {
+            width: 520px;
+            height: 66px;
+            @extend %font_forum;
+            @include font(3rem, 5rem, 400);
+            letter-spacing: 0.6px;
+            color: $color-tag;
+            border-radius: 10px;
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+  .authorization {
+    // .authorization__closed {}
+    z-index: 1;
+    .authorization__open {
+      display: none;
+    }
+    .authorization__title {
+      @extend %font_forum;
+      @include font(3rem, 4rem, 400);
+      color: $color-primary;
+      text-align: right;
+    }
+    .authorization__description {
+      width: 456px;
+      @extend %font_inter;
+      @include font(2rem, 4rem, 400);
+      letter-spacing: 0.4px;
+      color: $color-primary;
+      padding: 31px 0;
+      text-align: right;
+    }
+  }
+  .form__stats {
+    // display: flex;
+    display: none;
+    justify-content: center;
+    padding-top: 0px;
+    .stats__item {
+      width: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 35px;
+      .stats__item__icon__text {
+        @extend %font_inter;
+        @include font(1rem, 2rem, 400);
+        letter-spacing: 0.2px;
+        color: $color-primary;
+        text-align: center;
+      }
+      .stats__item__img {
+        width: 20px;
+        height: 21px;
+        margin: 5px 0;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: $laptop-width){
+  .find-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    margin-top: -2px;
+    .authorization {
+      padding: 20px 0 0 0;
+      .authorization__closed {
+        padding: 0px 10px 20px 10px;
+      }
+      .authorization__open {
+        display: none;
+      }
+      .authorization__title {
+        text-align: center;
+      }
+      .authorization__description {
+        width: 600px;
+        padding: 35px 10px 10px 10px;
+        text-align: center;
+      }
+    }
+  }
+}

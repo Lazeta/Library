@@ -1,0 +1,67 @@
+.bright {
+  color: $color-link;
+  transition: text-shadow 0.3s;
+  text-shadow: none;
+  &:hover {
+    text-shadow: 1px 1px 2px white, 0 0 4px blue, 0 0 6px purple;
+  }
+}
+
+.bright-icon {
+  filter: brightness(1);
+  transition: filter 0.3s;
+  position: relative;
+  display: inline-block;
+  ::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -5px;
+    right: -5px;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.3);
+    filter: blur(5px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+  }
+  :hover {
+    filter: brightness(1.8);
+  }
+  :hover::before {
+    opacity: 0.5;
+  }
+}
+
+.bright-icon-2 {
+  filter: brightness(1);
+  transition: filter 0.3s;
+  position: relative;
+  display: flex;
+  align-self: flex-start;
+  margin-right: auto;
+  ::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -5px;
+    right: -5px;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.3);
+    filter: blur(5px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+  }
+  :hover {
+    filter: brightness(1.8);
+  }
+  :hover::before {
+    opacity: 0.5;
+  }
+}
+
+.hover-disabled {
+  cursor: default !important;
+  pointer-events: none !important;
+}

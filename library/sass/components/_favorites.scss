@@ -1,0 +1,228 @@
+.favorites {
+  width: 100%;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 5px 25px 20px 20px;
+  .favorites__title {
+    display: block;
+    padding: 5px 0 30px 0;
+  }
+  .tab__nav {
+    // position: sticky;
+    // top: 0;
+    // z-index: 1;
+    // background-color: #FFFFFF;
+
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-bottom: 27px;
+    gap: 74px;
+    z-index: 1;
+    li:nth-child(2) {
+      margin-right: -5px;
+    }
+    li:nth-child(3) {
+      margin-right: 12px;
+    }
+    li {
+      width: 120px;
+      cursor: pointer !important;
+      .time-of-the-year {
+        color: $color-primary;
+        padding-left: 15px;
+        font-size: 20px;
+        cursor: pointer;
+
+      }
+      input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        border: 2px solid $color-primary;
+        border-radius: 50%;
+        transition: 0.3s all linear;
+        outline: none;
+        position: relative;
+        top: 2px;
+        cursor: pointer;
+      }
+      /* Стили для checked radio input */
+      input[type="radio"]:checked::before {
+        /* Определяем точку */
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: $color-primary;
+        border-radius: 50%;
+        /* Определяем положение точки */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Определяем анимацию для плавного появления */
+        opacity: 0;
+        animation: fadeIn 0.3s ease-in-out forwards;
+        cursor: pointer;
+      }
+      /* Стили для unchecked radio input */
+      input[type="radio"]:not(:checked)::before {
+        /* Определяем точку */
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        background-color: $color-primary;
+        border-radius: 50%;
+        /* Определяем положение точки */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* Определяем анимацию для плавного исчезновения */
+        opacity: 1;
+        animation: fadeOut 0.3s ease-in-out forwards;
+        cursor: pointer;
+      }
+      input:checked + label {
+        font-weight: 700;
+        cursor: pointer;
+      }
+    }
+  }
+  .tab__item {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px 220px;
+    margin-bottom: 20px;
+    animation: hideAnimation 1s forwards;
+    z-index: 1;
+
+    &.active {
+      display: flex;
+      animation: fadeIn;
+      animation-duration: 1.5s;
+    }
+    .grid-item {
+      width: 550px;
+      height: 555px;
+      margin-right: auto;
+      border: 1px solid;
+      position: relative;
+
+      .grid-item__description {
+        padding: 15px 20px 15px 20px;
+
+        h4 {
+          position: relative;
+          padding-bottom: 0px;
+        }
+
+        h4::after {
+          content: "";
+          display: block;
+          width: 60px;
+          height: 1px;
+          background-color: $color-tag;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+        }
+
+        h3 {
+          height: 40px;
+          padding-top: 19px;
+          letter-spacing: 2px;
+        }
+        .description {
+          padding-top: 40px;
+          padding-right: 150px;
+          text-transform: capitalize;
+        }
+      }
+
+      img {
+        position: absolute;
+        bottom: -1px;
+        right: -41px;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Анимация для плавного исчезновения */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hideAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .tab__item {
+    gap: 40px 100px !important;
+  }
+}
+
+@media (max-width: 1285px) {
+  .tab__item {
+    gap: 40px 20px !important;
+  }
+}
+
+@media (max-width: 1202px) {
+  .tab__item {
+    display: flex;
+    flex-direction: column !important;
+    align-content: center;
+    gap: 40px 220px !important;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .tab__nav {
+    gap: 74px !important;
+  }
+  .favorites__list {
+    padding-right: 40px;
+  }
+  .grid-item__description {
+    padding: 17px 20px 15px 20px !important;
+  }
+  .grid-item img {
+    right: -41px !important;
+  }
+}
+
+@media (max-width: 741px) {
+  .tab__nav {
+    gap: 30px !important;
+  }
+}

@@ -1,0 +1,28 @@
+.about {
+  p.about__paragraph {
+    @include font(2rem, 4rem, 400);
+    letter-spacing: normal;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .carousel__pagination__btn:nth-child(4),
+  .carousel__pagination__btn:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: $laptop-width) {
+  .about {
+    position: relative;
+    .about__paragraph {
+      padding: 0 20px 0 20px;
+    }
+    .carousel__pagination {
+      display: flex;
+      padding: 18px 36px 16px 44px;
+    }
+  }
+}

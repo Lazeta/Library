@@ -1,0 +1,112 @@
+.welcome {
+  position: relative;
+  width: 100%;
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      #0c0c0e 0%,
+      #0c0c0e 0.01%,
+      rgba(18, 18, 21, 0.1) 100%
+    );
+    z-index: 0;
+  }
+  img.img__welcome {
+    max-width: 100vw;
+  }
+
+  img.img__welcome_tablet {
+    display: none;
+  }
+  .welcome__title {
+    position: absolute;
+    top: 220px;
+    width: 600px;
+    height: 220px;
+    padding: 35px 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: $color-additional;
+    color: $color-link;
+    h2 {
+      @include font(4rem, 5rem, 400);
+      letter-spacing: 3px;
+      text-transform: uppercase; 
+    }
+  }
+}
+
+@media (max-width: 1072px) {
+  .welcome__title {
+    top: 200px !important;
+  }
+}
+
+@media (max-width: $laptop-width) {
+  .welcome {
+    .welcome__title {
+      position: absolute;
+      top: 25% !important;
+      width: 520px;
+      height: 220px;
+      padding: 35px 40px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      background-color: $color-additional;
+      color: $color-link;
+      h2 {
+        @include font(4rem, 5rem, 400);
+        letter-spacing: 3px;
+        text-transform: uppercase; 
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .welcome {
+    position: relative;
+    width: 100%;
+    max-width: $tablet-width;
+    margin: 0 auto 0 auto;
+    padding: 0px 0 0 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  
+    &::before {
+      z-index: 1;
+    }
+    img.img__welcome {
+      display: none;
+    }
+    
+    img.img__welcome_tablet {
+      display: flex;
+      max-width: 100vw;
+    }
+    .welcome__title {
+      position: absolute;
+      top: 37% !important;
+      width: 600px;
+      height: 220px;
+      padding: 35px 40px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      background-color: $color-additional;
+      color: $color-link;
+    }
+  }
+}

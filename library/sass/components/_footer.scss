@@ -1,0 +1,105 @@
+footer.footer {
+  width: 100%;
+  max-width: $content-width;
+  margin: 0px auto 0 auto;
+  padding: 41px 20px 20px 20px;
+  background-color: $color-additional;
+  li,
+  p {
+    color: $color-link;
+    letter-spacing: normal;
+    z-index: 1;
+  }
+  .footer__list {
+    p {
+      @include font(1.5rem, 2rem, 400);
+    }
+    .adress_time_work {
+      ul.adress_time_work__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        .adress_time_work__adress {
+          width: 230px;
+          text-align: left;
+        }
+        .adress_time_work__time_work {
+          width: 200px;
+          text-align: right;
+        }
+      }
+    }
+    .social_media {
+      padding: 0 0 23px 0;
+      .social_media__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        margin-top: 3px;
+        .social_media__icons {
+          display: flex;
+          width: 102px;
+          height: 24px;
+          justify-content: center;
+          padding-top: 10px;
+          align-items: center;
+          gap: 15px;
+        }
+        .social_media__logo {
+          bottom: -10px;
+        }
+        .social_media__time_work {
+          text-align: right;
+          padding-right: 1px;
+          z-index: 1;
+        }
+        li.social_media__item {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  .footer__rsschool {
+    .footer__rsschool__list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 30px 0 10px 0;
+      li,
+      a {
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+ 
+@media (max-width: $tablet-width) {
+  footer.footer {
+    width: 100%;
+    max-width: $tablet-width;
+    margin: 0px auto 0 auto;
+    padding: 20px 20px 20px 20px;
+    .social_media__list {
+      .social_media__logo {
+        bottom: -10px !important;
+        left: 30px;
+      }
+    }
+    .footer__rsschool {
+      .footer__rsschool__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 30px 0 10px 0;
+        .footer__rsschool__list__course {
+          padding-right: 60px;
+        }
+      }
+    }
+  }
+}

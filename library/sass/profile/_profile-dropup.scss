@@ -1,0 +1,74 @@
+.drop-menu {
+    .drop-menu__no-authorization {
+        display: block;
+        position: absolute;
+        width: 80px;
+        min-height: 115px;
+        background: $color-background;
+        color: $color-primary;
+        z-index: 5;
+        right: 0;
+        text-align: center;
+        opacity: 0;
+        transform: translateX(120px);
+        transition: opacity 1s, transform 1s;
+        top: 38px;
+        &._active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .profile__title {
+            padding: 5px;
+            margin: 0px 5px 0 5px;
+        }
+        button {
+            cursor: pointer;
+            @include font(1.5rem, 2rem, 400);
+
+            &.login-button,.my-profile__btn {
+                padding: 5px;
+                margin: 5px 5px 0px 5px;
+                transform: scale(1.0);
+                transition: transform 0.3s;
+                &:active {
+                    transform: scale(1.15);
+                }
+                &:hover {
+                    transform: scale(0.95);
+                    transition: transform 0.2s;
+                    &:active {
+                        transform: scale(1.15);
+                    }
+                }
+            }
+            &.register-button,.profile-button__out {
+                padding: 5px;
+                margin: 0px 5px 15px 5px;
+                transform: scale(1.0);
+                transition: transform 0.3s;
+                &:active {
+                    transform: scale(1.15);
+                }
+                &:hover {
+                    transform: scale(0.95);
+                    transition: transform 0.2s;
+                    &:active {
+                        transform: scale(1.15);
+                    }
+                }
+            }
+        }
+        .my-profile__btn {
+            display: none;
+            &.show {
+                display: block;
+            }
+        }
+        .profile-button__out {
+            display: none;
+            &.show {
+                display: block;
+            }
+        }
+    }
+}

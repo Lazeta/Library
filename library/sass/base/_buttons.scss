@@ -1,0 +1,129 @@
+button {
+  background-color: transparent;
+  z-index: 1;
+}
+
+.btn {
+  width: 75px;
+  height: 30px;
+  position: absolute;
+  bottom: 15px;
+  @extend %font_inter;
+  @include font(1rem, normal, 700);
+  letter-spacing: 1px;
+  border-radius: 2px;
+  text-align: center;
+  cursor: pointer;
+}
+.buy {
+  border: 1px solid $color-additional;
+  &:hover {
+    background-color: $color-tag;
+    border-color: $color-tag;
+    transition: all 0.3s ease-in-out;
+  }
+}
+.own {
+  border: 1px solid $color-tag;
+  color: $color-tag;
+  cursor: auto;
+}
+
+.button__block {
+  text-align: center;
+  padding: 20px 10px 30px 10px;
+  button.form__card {
+    width: 240px;
+    @extend %font_inter;
+    @include font(2rem, 4rem, 700);
+    letter-spacing: 1px;
+    color: $color-additional;
+    border: 1px solid $color-primary;
+    border-radius: 2px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-tag;
+      border-color: $color-tag;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
+
+.btn_form__login,
+.btn_form__signup {
+  width: 75px;
+  height: 30px;
+  margin-top: 10px;
+  text-align: center;
+  flex-shrink: 0;
+  border: 1px solid $color-additional;
+  color: $color-additional;
+  border-radius: 2px;
+  @extend %font_inter;
+  @include font(1rem, normal, 700);
+  letter-spacing: 1px;
+  cursor: pointer;
+  transform: scale(1.0);
+  transition: transform 0.3s;
+  &:active {
+      transform: scale(1.05);
+  }
+  &:hover {
+      transform: scale(0.95);
+      transition: transform 0.2s;
+      &:active {
+          transform: scale(1.05);
+      }
+  }
+}
+.btn__close {
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.authorization__btn__block {
+  text-align: right;
+  .authorization__btn {
+    width: 75px;
+    height: 30px;
+    padding: 6px 6px;
+    border-radius: 2px;
+    border: 1px solid $color-primary;
+    text-align: center;
+    @extend %font_inter;
+    @include font(1rem, normal, 700);
+    letter-spacing: 1px;
+    margin: 4px 0 0 16px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-tag;
+      border-color: $color-tag;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  @media (max-width: $laptop-width) {
+    text-align: center;
+    padding-top: 25px;
+    .authorization__btn {
+      padding: 6px 6px;
+      margin: 4px 0 0 15px;
+    }
+  }
+  @media (max-width: $tablet-width) {
+    text-align: center;
+    padding-top: 25px;
+    padding-right: 10px;
+    .authorization__btn {
+      padding: 6px 6px;
+      margin: 4px 0 0 15px;
+    }
+  }
+}

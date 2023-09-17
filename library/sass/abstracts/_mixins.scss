@@ -1,0 +1,111 @@
+@mixin font($size, $height: $size, $weight: 400) {
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+// Миксин для анимации fade-in
+@mixin transition-fade-in {
+  opacity: 0;
+  transition: opacity 1s;
+}
+@mixin transition-fade-in-active {
+  opacity: 1;
+}
+
+// Миксин для анимации blur-in
+@mixin transition-blur-in {
+  opacity: 0;
+  filter: blur(10px);
+  transition: opacity 1s, filter 1s;
+}
+@mixin transition-blur-in-active {
+  opacity: 1;
+  filter: blur(0);
+}
+
+// Миксин для анимации scale-in
+@mixin transition-scale-in {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s, transform 1s;
+}
+@mixin transition-scale-in-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+// Миксин для анимации rotate-in
+@mixin transition-rotate-in {
+  opacity: 0;
+  transform: rotate(-45deg);
+  transition: opacity 1s, transform 1s;
+}
+@mixin transition-rotate-in-active {
+  opacity: 1;
+  transform: rotate(0);
+}
+
+// Миксин для анимации slide-down
+@mixin transition-slide-down {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s, transform 1s;
+}
+@mixin transition-slide-down-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// Миксин для анимации slide-up
+@mixin transition-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+@mixin transition-slide-up-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// Миксин для анимации slide-left
+@mixin transition-slide-left {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 1s, transform 1s;
+}
+@mixin transition-slide-left-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+// Миксин для анимации slide-right
+@mixin transition-slide-right {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 1s, transform 1s;
+}
+@mixin transition-slide-right-active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+// Миксин для анимации fade-in-opacity
+@mixin transition-fade-in-opacity {
+  opacity: 0;
+  transition: opacity 1s;
+}
+@mixin transition-fade-in-opacity-active {
+  opacity: 1;
+}
+
+// Миксин для анимации fade-in-scale
+@mixin transition-fade-in-scale {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 1s, transform 1s;
+}
+@mixin transition-fade-in-scale-active {
+  opacity: 1;
+  transform: scale(1);
+}

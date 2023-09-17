@@ -1,0 +1,111 @@
+.contacts {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  max-width: $content-width;
+  .contacts__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 80px;
+    .text_info {
+      padding-left: 20px;
+      z-index: 1;
+      li,
+      a {
+        color: $color-primary;
+        @extend %font_inter;
+        @include font(2rem, 4rem, 400);
+        letter-spacing: 2px;
+        text-transform: capitalize;
+      }
+      strong {
+        @include font(2rem, 4rem, 700);
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        padding-bottom: 20px;
+      }
+      ul.questions {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 40px;
+        gap: 20px;
+        .questions__title {
+          padding-bottom: 20px;
+        }
+      }
+      ul.staff {
+        display: flex;
+        flex-direction: column;
+        .staff__title {
+          padding-bottom: 20px;
+        }
+      }
+    }
+  }
+  .adress-map {
+    position: relative;
+    width: 696px;
+    height: 414px;
+    right: 20px;
+    iframe {
+      width: 100%;
+    }
+  }
+  #map {
+    height: 450px;
+    width: 600px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .adress-map {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: $laptop-width){
+  .contacts__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .adress-map {
+      position: relative;
+      width: 90%;
+      height: auto;
+      padding: 0 20px;
+      margin: 0 auto;
+      iframe {
+        width: 100%;
+      }
+    }
+    #map {
+      height: 450px;
+      width: 600px;
+    }
+  }
+}
+@media (max-width: $tablet-width){
+  .contacts__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 100px !important;
+    .adress-map {
+      position: relative;
+      width: 100%;
+      height: auto;
+      left: auto;
+      right: auto;
+      iframe {
+        width: 100%;
+        padding-left: 25px;
+        padding-right: 10px;
+      }
+    }
+    #map {
+      height: auto;
+      width: auto;
+    }
+  }
+}
