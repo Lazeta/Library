@@ -1,0 +1,27 @@
+{
+	"folders": [
+		{
+			"name": ".github",
+			"path": "..\\lazeta-JSFEPRESCHOOL2023Q2\\.github"
+		},
+		{
+			"name": ".vscode",
+			"path": "..\\lazeta-JSFEPRESCHOOL2023Q2\\.vscode"
+		},
+		{
+			"name": "Library",
+			"path": "."
+		},
+		{
+			"name": "library",
+			"path": "..\\lazeta-JSFEPRESCHOOL2023Q2\\library"
+		},
+		{
+			"name": ".git",
+			"path": "..\\lazeta-JSFEPRESCHOOL2023Q2\\.git"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "library"
+	}
+}
