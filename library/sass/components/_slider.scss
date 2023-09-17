@@ -1,0 +1,119 @@
+.slider {
+  padding: 0 10px 15px 10px;
+  text-align: center;
+  .slider__wrapper,
+  .dot,
+  .dots__wrapper__border,
+  .arrow-1,
+  .arrow-2 {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .slider__wrapper {
+    overflow: hidden;
+    width: 1400px;
+    margin: 0px 10px 0 10px;
+    display: flex;
+    .slider__line {
+      display: flex;
+      position: relative;
+      left: 0;
+      transition: 1.25s;
+      gap: 25px;
+      > img {
+        border-radius: 5px;
+      }
+    }
+  }
+  .dots__wrapper {
+    padding: 20px 0px 20px 0px;
+    .dots__wrapper__border {
+      padding-top: 5px;
+      width: 26px;
+      height: 26px;
+      background: transparent;
+      cursor: pointer;
+    }
+  }
+  .dots__wrapper__border:nth-child(4) {
+    display: none;
+  }
+  .dots__wrapper__border:nth-child(5) {
+    display: none;
+  }
+  .dot {
+    padding: 5px;
+    width: 16px;
+    height: 16px;
+    background: $color-additional;
+    border-radius: 50%;
+    transition: 0.5s;
+    &:hover {
+      background: $color-tag;
+    }
+    &:active {
+      background-color: $color-tag;
+    }
+    &.active {
+      background-color: $color-tag;
+      // cursor: default;
+    }
+  }
+}
+
+@media (max-width: $laptop-width) {
+  .slider {
+    padding: 10px;
+    text-align: center;
+    display: block;
+    .slider__wrapper,
+    .dot,
+    .dots__wrapper__border,
+    .arrow-1,
+    .arrow-2 {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .slider__wrapper {
+      overflow: hidden;
+      width: 450px;
+      margin: 0 50px 0 50px;
+      border-radius: 5px;
+      box-shadow: 1px 1px 10px 2px #332d29;
+      .slider__line {
+        display: flex;
+        position: relative;
+        left: 0;
+        transition: 1.25s;
+        gap: 0;
+      }
+    }
+    .dots__wrapper {
+      padding: 20px 0px 20px 0px;
+      .dots__wrapper__border {
+        padding-top: 5px;
+        width: 26px;
+        height: 26px;
+        background: transparent;
+        cursor: pointer;
+      }
+    }
+  }
+  .dots__wrapper__border:nth-child(4), .dots__wrapper__border:nth-child(5) {
+    display: inline-block !important;
+  }
+  .dot {
+    padding: 5px;
+    width: 16px;
+    height: 16px;
+    background: $color-additional;
+    border-radius: 50%;
+    transition: 0.5s;
+    &:hover {
+      background: $color-tag;
+    }
+    &:active {
+      background-color: $color-tag;
+    }
+  }
+}

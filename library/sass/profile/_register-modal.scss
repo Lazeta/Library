@@ -1,0 +1,24 @@
+.modal__register {
+  top: 25vh;
+  width: 250px;
+  min-height: 382px;
+  padding: 20px 25px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  opacity: 0;
+  z-index: 15;
+  opacity: 0;
+  transform: translateY(-650px);
+  transition: opacity 1.2s, transform 1.5s;
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  > h4 {
+    text-align: center;
+  }
+}

@@ -1,0 +1,106 @@
+.coffeeShop {
+  width: 100%;
+  max-width: $content-width;
+  margin: 0 auto;
+  p.coffeeShop__description {
+    @extend %font_inter;
+    padding: 0px 20px;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: lowercase;
+  }
+  .coffeeShop__menu {
+    padding: 40px 10px 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .cooffe_and_tea {
+      width: auto;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      ul.menu__list {
+        margin-top: 20px;
+        li.menu__item {
+          display: flex;
+          align-items: center;
+          gap: 60px;
+          .menu__item__title {
+            @include font(2rem, 4em, 400);
+            letter-spacing: 2px;
+            text-transform: capitalize;
+          }
+          .menu__item__price {
+            @extend %font_forum;
+            @include font(2rem, 4em, 400);
+            letter-spacing: 2px;
+            color: $color-primary;
+          }
+        }
+      }
+    }
+
+    .desserts_and_cakes {
+      width: 482px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: end;
+      padding-right: 10px;
+      ul.menu__list {
+        margin-top: 20px;
+        li.menu__item {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 58px;
+          .menu__item__title {
+            width: 400px;
+            @include font(2rem, 4em, 400);
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            text-align: right;
+          }
+          .menu__item__price {
+            @extend %font_forum;
+            @include font(2rem, 4em, 400);
+            letter-spacing: 2px;
+            color: $color-primary;
+          }
+        }
+      }
+    }
+    .menu__title {
+      @include font(4rem, 4rem, 400);
+      text-transform: capitalize;
+      letter-spacing: 2px;
+      color: $color-tag;
+    }
+  }
+}
+
+@media (max-width: $laptop-width) {
+  .desserts_and_cakes {
+    padding-right: 20px !important;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .coffeeShop__menu {
+    height: 1141px;
+    padding: 41px 10px 0 20px !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: none;
+    position: relative;
+
+    .desserts_and_cakes {
+      padding: 0px 20px 0 0px;
+      position: absolute;
+      top: 52.7%;
+      right: 0;
+    }
+  }
+}

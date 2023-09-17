@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  line-height: 10px;
+  scroll-behavior: smooth;
+  overflow-x: auto; /* или auto, если вы хотите, чтобы полосы прокрутки были видны только тогда, когда это необходимо */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(41, 44, 53);
+  border-radius: 5px;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: $color-additional;
+  overflow-x: hidden;
+  z-index: 0;
+}
+
+
+li,
+a {
+  @extend %font_inter;
+  @include font(2rem, 5rem, 400);
+  color: $color-link;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1 {
+  @extend %font_forum;
+  @include font(3rem, 4rem, 400);
+  letter-spacing: 0.6px;
+  text-transform: capitalize;
+}
+
+h2 {
+  @extend %font_forum;
+  @include font(3rem, 4rem, 400);
+  letter-spacing: 0.6px;
+  text-transform: capitalize;
+}
+
+h3 {
+  @extend %font_inter;
+  @include font(1.5rem, 4rem, 700);
+  letter-spacing: 0.6px;
+  color: $color-primary;
+}
+h4 {
+  @extend %font_forum;
+  @include font(2rem, 4rem, 400);
+  letter-spacing: 2px;
+  color: $color-primary;
+}
+
+p {
+  @extend %font_inter;
+  @include font(1.5rem, 4rem, 400);
+  letter-spacing: 2px;
+  color: $color-primary;
+}
+
+strong {
+  @extend %font_inter;
+  @include font(2rem, 1.6rem, 700);
+  color: $color-primary;
+}
+
+.line {
+  width: 50px;
+  height: 1px;
+  background: $color-additional;
+  margin: 20px auto 40px auto;
+}
+.line-2 {
+  width: 100px;
+  height: 1px;
+  background: $color-tag;
+  margin: 0px 0px 0px auto;
+}
+.line-3 {
+  max-width: 1400px;
+  height: 1px;
+  background: $color-link;
+  margin: 0px auto 0px auto;
+}
+.line-4 {
+  width: 40px;
+  height: 1px;
+  background: $color-tag;
+  margin: 5px auto;
+}
+
+.uppercase__title {
+  text-transform: uppercase;
+  letter-spacing: 2px;  
+}
+
+.section__title {
+  padding-top: 20px;
+  @include font(4rem, 4rem, 400);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  color: $color-additional;
+  @media (max-width: $laptop-width) {
+    padding-left: 10px;
+  }
+}

@@ -1,0 +1,14 @@
+ol,ul {
+    list-style: none;
+    list-style-type: none;
+}
+
+*,
+*:after,
+*:before {
+    box-sizing: inherit;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}

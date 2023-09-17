@@ -1,0 +1,13 @@
+main.main {
+    width: 100%;
+    max-width: $content-width;
+    margin: 0 auto;
+    padding: 0; 
+    background-color: $color-background;
+}
+
+@media (max-width: $tablet-width) {
+    main.main {
+        max-width: $tablet-width;
+    }
+}

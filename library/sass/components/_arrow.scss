@@ -1,0 +1,113 @@
+@media (max-width: 1024px){
+  .arrow-2 {
+    display: inline;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    padding: 20px;
+    right: calc(9.1%);
+    top: 58.3%;
+    z-index: 1;
+    cursor: pointer;
+  
+    .arrow-2-top,
+    .arrow-2-bottom {
+      position: absolute;
+      background: $color-primary;
+      height: 2px;
+      width: 8px;
+      top: 20px;
+      left: 15px;
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: $color-tag;
+        height: 100%;
+        top: 0;
+        transition: all 0.15s;
+      }
+    }
+    .arrow-2-top {
+      transform: rotate(45deg);
+      transform-origin: bottom right;
+      &::after {
+        left: 100%;
+        right: 0;
+        transition-delay: 0s;
+      }
+    }
+    .arrow-2-bottom {
+      transform: rotate(-45deg);
+      transform-origin: top right;
+      &::after {
+        left: 0;
+        right: 100%;
+        transition-delay: 0.15s;
+      }
+    }
+    &:hover .arrow-2-top::after {
+      left: 0;
+      transition-delay: 0.15s;
+    }
+    &:hover .arrow-2-bottom::after {
+      right: 0;
+      transition-delay: 0s;
+    }
+  }
+  
+  .arrow-1 {
+    display: inline;
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    padding: 20px;
+    left: calc(9.2%);
+    top: 58.3%;
+    z-index: 1;
+    cursor: pointer;
+  
+    .arrow-1-top,
+    .arrow-1-bottom {
+      position: absolute;
+      background: $color-primary;
+      height: 2px;
+      width: 8px;
+      top: 20px;
+      left: 15px;
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: $color-tag;
+        height: 100%;
+        top: 0;
+        transition: all 0.15s;
+      }
+    }
+    .arrow-1-top {
+      transform: rotate(45deg);
+      transform-origin: bottom left;
+      &::after {
+        left: 0;
+        right: 100%;
+        transition-delay: 0s;
+      }
+    }
+    .arrow-1-bottom {
+      transform: rotate(-45deg);
+      transform-origin: top left;
+      &::after {
+        left: 100%;
+        right: 0;
+        transition-delay: 0.15s;
+      }
+    }
+    &:hover .arrow-1-top::after {
+      right: 0;
+      transition-delay: 0s;
+    }
+    &:hover .arrow-1-bottom::after {
+      left: 0;
+      transition-delay: 0.15s;
+    }
+  }
+}
